@@ -2,6 +2,12 @@
 
 A beautiful, interactive React-based Tic Tac Toe game with animated X and O placement, game history tracking, and AG Grid integration.
 
+## 🌐 Live Demo
+
+**Play the game:** [https://your-username.github.io/tic-tac-toe/](https://your-username.github.io/tic-tac-toe/)
+
+> **Note:** Replace `your-username` with your GitHub username in the URL above.
+
 ## Features
 
 - 🎮 **Animated Gameplay**: Smooth animations when placing X and O pieces
@@ -82,6 +88,50 @@ tic-tac-toe/
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
+- `npm run deploy` - Build and deploy to GitHub Pages (manual deployment)
+
+## Deployment
+
+This project is configured for GitHub Pages deployment. The app will be automatically deployed when you push to the `main` or `master` branch.
+
+### Automatic Deployment (Recommended)
+
+1. Enable GitHub Pages in your repository settings:
+   - Go to **Settings** → **Pages**
+   - Under **Source**, select **GitHub Actions**
+   - The workflow will automatically deploy on every push to `main`/`master`
+
+2. Your site will be available at:
+   ```
+   https://<your-username>.github.io/tic-tac-toe/
+   ```
+
+### Manual Deployment
+
+If you prefer to deploy manually:
+
+1. Install dependencies (if not already installed):
+   ```bash
+   npm install
+   ```
+
+2. Deploy to GitHub Pages:
+   ```bash
+   npm run deploy
+   ```
+
+3. The first time you deploy, you'll need to:
+   - Authenticate with GitHub
+   - Allow the `gh-pages` package to create a `gh-pages` branch
+
+### Updating the Repository About Section
+
+To add the GitHub Pages link to your repository's "About" section:
+
+1. Go to your repository on GitHub
+2. Click the ⚙️ gear icon next to "About"
+3. Check "Website" and enter: `https://your-username.github.io/tic-tac-toe/`
+4. Click "Save changes"
 
 ## License
 
