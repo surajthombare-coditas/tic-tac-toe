@@ -1,0 +1,105 @@
+.game-history-container {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(15px, 2vh, 20px);
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.history-header h2 {
+  color: #2f3542;
+  font-size: clamp(1.5rem, 3vw, 1.8rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+.history-header .icon-button.back {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.history-header .icon-button.back svg {
+  stroke: white;
+}
+
+.no-history {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(40px, 8vh, 60px);
+  text-align: center;
+}
+
+.no-history p {
+  color: #888;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  margin: 0;
+}
+
+.history-table {
+  width: 100%;
+  flex: 1;
+  min-height: 400px;
+  height: calc(100vh - 300px);
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.history-table .ag-root-wrapper {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+/* AG Grid theme customization */
+.ag-theme-alpine {
+  --ag-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --ag-font-size: clamp(0.85rem, 1.5vw, 1rem);
+  --ag-header-height: 45px;
+  --ag-row-height: 45px;
+  --ag-border-color: #e0e0e0;
+  --ag-header-background-color: #f8f9fa;
+  --ag-odd-row-background-color: #ffffff;
+  --ag-even-row-background-color: #f8f9fa;
+  --ag-row-hover-color: #e8f4f8;
+}
+
+.ag-theme-alpine .ag-header-cell {
+  font-weight: 600;
+  color: #2f3542;
+}
+
+.ag-theme-alpine .ag-paging-panel {
+  padding: clamp(10px, 1.5vh, 15px);
+  border-top: 1px solid #e0e0e0;
+  background-color: #f8f9fa;
+}
+
+.ag-theme-alpine .ag-paging-button {
+  padding: clamp(6px, 1vh, 8px) clamp(12px, 1.5vw, 16px);
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .history-table {
+    height: calc(100vh - 200px);
+    min-height: 300px;
+  }
+  
+  .ag-theme-alpine {
+    --ag-header-height: 40px;
+    --ag-row-height: 40px;
+  }
+}
+
